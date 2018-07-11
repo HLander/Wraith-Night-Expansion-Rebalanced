@@ -1,0 +1,16 @@
+"AddonInfo"
+{
+	"triple_lane"
+	{
+		"MinPlayers"     	"2"
+		"MaxPlayers"		"5"
+	}
+	"single_lane"
+	{
+		"MaxPlayers"		"2"
+	}
+	"single_lane_hard"
+	{
+		"MaxPlayers"		"2"
+	}
+}

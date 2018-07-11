@@ -1,0 +1,20 @@
+"addon"
+{
+	"Unassigned"								"Неопределившиеся"
+	"Spectator"									"Зрители"
+	"Neutrals"									"Нейтралы"
+	"NoTeam"									"Без команды"
+
+	"DOTA_GoodGuys"								"Защитники"
+	"DOTA_BadGuys"								"Yellow Monkey"
+	"DOTA_Custom1"								"Pink Dragon"
+	"DOTA_Custom2"								"Orange Dog"
+	"DOTA_Custom3"								"Blue Rooster"
+	"DOTA_Custom4"								"Green Ram"
+	"DOTA_Custom5"								"Brown Rat"
+	"DOTA_Custom6"								"Cyan Boar"
+	"DOTA_Custom7"								"Olive Snake"
+	"DOTA_Custom8"								"Purple Horse"
+
+	"addon_game_name"							"WN: Expansion"
+}

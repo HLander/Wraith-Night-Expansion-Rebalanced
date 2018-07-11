@@ -1,0 +1,20 @@
+"addon"
+{
+	"Unassigned"      								"未分配阵营"
+	"Spectator"       								"观众"
+	"Neutrals"        								"中立阵营"
+	"NoTeam"          								"无阵营"
+
+	"DOTA_GoodGuys"   								"防御者"
+	"DOTA_BadGuys"    								"黄猴队"
+	"DOTA_Custom1"    								"粉龙队"
+	"DOTA_Custom2"    								"橙犬队"
+	"DOTA_Custom3"    								"蓝鸡队"
+	"DOTA_Custom4"    								"绿羊队"
+	"DOTA_Custom5"    								"棕鼠队"
+	"DOTA_Custom6"    								"青豚队"
+	"DOTA_Custom7"    								"茶蛇队"
+	"DOTA_Custom8"    								"紫马队"
+	
+	"addon_game_name"										"冥魂之夜：扩展版"
+}
