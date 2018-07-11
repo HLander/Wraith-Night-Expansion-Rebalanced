@@ -67,6 +67,7 @@ function CHoldoutGameMode:InitGameMode()
 	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.04 )
 	GameRules:SetHeroRespawnEnabled( true ) --***change it to true
+	GameRules:GetGameModeEntity():SetFixedRespawnTime( 40.0 )
 	GameRules:SetUseUniversalShopMode( true )
 	GameRules:SetHeroSelectionTime( 30.0 )
 	GameRules:SetPreGameTime( 20.0 )
