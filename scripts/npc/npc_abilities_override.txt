@@ -542,30 +542,7 @@
 				"spell_resist_pct"		"-15 -20 -25 -30 -35 -40 -45"
 			}
 		}
-	}
-	"rattletrap_power_cogs"
-	{
-		"MaxLevel"					"7"
-		"AbilityManaCost"			"50 60 70 80 90 100 110"
-		"AbilitySpecial"
-		{
-			"02"
-			{	
-				"var_type"			"FIELD_FLOAT"
-				"duration"			"5.0 6.0 7.0 8.0 9.0 10.0 11.0"
-			}
-			"03"
-			{	
-				"var_type"			"FIELD_INTEGER"
-				"drain_amount"		"80 120 160 200 240 280 320"
-			}
-			"04"
-			{	
-				"var_type"			"FIELD_INTEGER"
-				"attacks_to_destroy"	"2 2 2 3 3 3 4"
-			}
-		}
-	}
+	}	
 
 	"invoker_ghost_walk"
 	{

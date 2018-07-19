@@ -15726,7 +15726,149 @@
 			}
 		}
 	}
+	
+	"rattletrap_tower_cog"
+	{
+		// General
+		"BaseClass"                     "ability_lua"
+        "ScriptFile"                    "rattletrap_tower_cog.lua"		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityTextureName"			"rattletrap_power_cogs"		
+		"MaxLevel"						"4"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				".2"
 
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 20 10 5"
+		
 
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"60.0" 
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"min_damage"			"19 39 49 69"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_damage"			"21 41 51 71"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"search_radius"			"500.0"
+			}
+		}				
+	}
+	
+	"rattletrap_tower_cog_passive"
+	{
+		// General
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"modifier_invulnerable"
+		"AbilityType"					"DOTA_ABILITY_BASIC"
+		"MaxLevel"						"1"
+		
+		// Ability Modifiers
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{			
+			"modifier_ability_tower_cog_passive"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"States"
+				{
+					"MODIFIER_STATE_INVULNERABLE"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}		
+	}
+	
+	"rattletrap_tower_cog_passive2"
+	{
+		// General
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"		
+		"AbilityTextureName"			"tinker_laser"
+		"AbilityType"					"DOTA_ABILITY_BASIC"
+		"MaxLevel"						"4"		
+		
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"			
+		}
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"splash_modifier"		".25 .50 .75 1.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"splash_radius"			"225 340 455 570"
+			}			
+		}
+		
+		// Ability Modifiers
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+			"modifier_ability_tower_cog_passive2"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"				
+				
+				"Orb"
+				{
+					"Priority"				"DOTA_ORB_PRIORITY_ABILITY"					
+					"CastAttack"			"0"
+				}
+				
+				"OnOrbFire"
+				{
+					"FireSound"					
+					{						
+						"EffectName"		"Hero_Tinker.Laser"
+						"Target"			"TARGET"
+					}
+				}
+
+				"OnOrbImpact"
+				{						
+					"RunScript"
+					{
+						"ScriptFile"		"rattletrap_tower_cog.lua"
+						"Function"			"tower_cog_on_orb_impact"
+					}
+				}
+			}
+		}		
+	}
 }
